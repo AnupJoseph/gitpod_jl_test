@@ -1,9 +1,9 @@
 # Commands to start on workspace startup
 tasks:
   - name: Setup & Build
-    before: curl -fsSL https://install.julialang.org | sh
-    init: juliaup add 1.8.5~x86
-    command: juliaup self update
+    before: wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.5-linux-x86_64.tar.gz -P ../
+    init: tar zxvf ../julia-1.8.5-linux-x86_64.tar.gz
+    command: export PATH="/workspace/julia-1.8.5/bin"
 
 # Ports to expose on workspace startup
 # ports:
