@@ -1,8 +1,8 @@
 # Commands to start on workspace startup
 tasks:
   - name: Setup & Build
-    before: wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.5-linux-x86_64.tar.gz -P ../
-    init: tar zxvf ../julia-1.8.5-linux-x86_64.tar.gz
+    before: wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.5-linux-x86_64.tar.gz -P /workspace/
+    init: tar zxvf /workspace/julia-1.8.5-linux-x86_64.tar.gz
     command: export PATH="/workspace/julia-1.8.5/bin"
 
 # Ports to expose on workspace startup
